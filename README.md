@@ -35,13 +35,13 @@ system_role_network:
       register: system_role_output
     - debug:
         msg: "this host on home environment"
-      when: system_role_output is defined and system_role_output['system_role'] == 'home_debian'
+      when: system_role_output['system_role'] == 'home_debian'
     - debug:
         msg: "this host on earth environment"
-      when: system_role_output is defined and system_role_output['system_role'] == 'earth_debian'
+      when: system_role_output['system_role'] == 'earth_debian'
     - debug:
         msg: "this host on moon environment"
-      when: system_role_output is defined and system_role_output['system_role'] == 'moon_debian'
+      when: system_role_output['system_role'] == 'moon_debian'
   roles:
     - system_role
 ````
